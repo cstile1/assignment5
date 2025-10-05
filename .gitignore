@@ -1,0 +1,19 @@
+# Virtual env
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Test/coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS finder junk
+.DS_Store
+
+# Local environment variables (keep secrets out of git)
+.env
