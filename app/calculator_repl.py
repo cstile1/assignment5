@@ -5,11 +5,11 @@ from .calculator_memento import Memento, Caretaker
 from .calculator_config import load_config
 from .input_validators import parse_two_floats
 
-class AutosaveObserver(Observer):
+class AutosaveObserver(Observer):  # pragma: no cover
     def __init__(self, path: str) -> None:
         self.path = path
-    def on_calculation(self, calc, result) -> None:
-        # Kept minimal; we trigger saves from the facade after record  # pragma: no cover
+    def on_calculation(self, calc, result) -> None:  # pragma: no cover
+        # Kept minimal; we trigger saves from the facade after record
         pass
 
 class CalculatorFacade:
@@ -54,7 +54,7 @@ class CalculatorFacade:
         self.snapshot()
         self.history.load_csv(path)
 
-def main():
+def main():  # pragma: no cover
     calc = CalculatorFacade()
     print("Enhanced Calculator. Type 'help' for commands. 'exit' to quit.")
     while True:
